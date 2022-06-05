@@ -8,3 +8,11 @@
     {% endfor %}
 </p>
 {% endblock %}
+
+{% block img %}
+<p>
+    {% for key in user.images %}
+    <img class = "education-img" src="./static/img/{{ key }}" alt = "education image"/>
+    {% endfor %}
+</p>
+{% endblock %}
