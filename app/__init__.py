@@ -5,6 +5,15 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+USER_INFO = {
+    'hobbies':['Blogging','Reading Books','Playing chess'],
+    'experiences': ['lorem ipsum', 'xxx', 'more description about work experiences'],
+    'education':{
+        'XX College',
+        'XX University'
+    }
+}
+
 @app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
@@ -19,11 +28,4 @@ def home():
  
 @app.route('/education')
 def education():
-    user_info = {
-        'hobbies':['Blogging','Reading Books','Playing chess'],
-        'education':{
-            'XX College',
-            'XX University'
-        }
-    }
-    return render_template('education.html', user = user_info)
+    return render_template('education.html', user = USER_INFO)
