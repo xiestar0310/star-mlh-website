@@ -197,3 +197,15 @@ body {
     font-weight: 200px;
     letter-spacing: 1px;
 }
+.container-fluid div{
+    display: flex;
+    justify-content:center;
+}
+.nav-link{
+    color:#FFFFFF;
+}
+  li {
+    text-align: center;
+    margin-right: 4em;
+  }
+
