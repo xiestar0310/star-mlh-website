@@ -35,6 +35,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1em;
 }
 
 .nav-logo img {
@@ -207,5 +208,6 @@ body {
   li {
     text-align: center;
     margin-right: 4em;
+    margin-left: 4em;
   }
 
