@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %} Education {% endblock %}
+{% block name %}
+<p>
+    {% for key in user.education %}
+     <li>{{key}}</li>
+    {% endfor %}
+</p>
+{% endblock %}
+
+{% block img %}
+<p>
+    {% for key in user.images %}
+    <img class = "education-img" src="./static/img/{{ key }}" alt = "education image"/>
+    {% endfor %}
+</p>
+{% endblock %}
