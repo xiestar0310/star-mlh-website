@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %} Work Experience {% endblock %}
+
+{% block name %}
+<!--position-->
+{% for key in user.experiences %}
+    <h3 class="job-name">
+    {{key}}
+    </h3>
+    <!--details-about-position-->
+    {% for details in user.experiences.get(key)%}
+        <p1>
+        <li class="details">{{details}}</li>
+        </p1>
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}
+

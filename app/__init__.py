@@ -69,3 +69,4 @@ def countries():
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', user = STAR_USER_INFO)
+
