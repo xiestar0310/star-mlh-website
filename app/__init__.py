@@ -38,7 +38,10 @@ ELAINE_USER_INFO = {
                 + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
                 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
                 + ' ut aliquip ex ea commodo consequat.'],
-        'Job 2': ['did this', 'did that']
+        'Job 2': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi' 
+                + ' ut aliquip ex ea commodo consequat.']
     },
     'education':{
         'XX College': ['logo.jpg'],
