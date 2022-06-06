@@ -6,7 +6,12 @@ load_dotenv()
 app = Flask(__name__)
 
 STAR_USER_INFO = {
-    'hobbies':['Blogging','Reading Books','Playing chess'],
+    'hobbies':{
+        'hobby 1': ['logo.jpg'],
+        'hobby 2': ['smallcats.png'],
+        'hobby 3': ['logo.jpg'],
+        'hobby 4': ['smallcats.png']
+     },
     'experiences':{
         'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
                 + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
@@ -60,3 +65,8 @@ def star_about():
 @app.route('/countries')
 def countries():
     return render_template('countries.html')
+
+@app.route('/hobbies')
+def hobbies():
+    return render_template('hobbies.html', user = STAR_USER_INFO)
+

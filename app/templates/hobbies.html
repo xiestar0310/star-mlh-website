@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+<header class="nav-bar">
+    {% include 'navbar.html' %}
+</header>
+
+{% block pagetitle %} Hobbies {% endblock %}
+{% block name %}
+
+    {% for key in user.hobbies %}
+        <h2 class="hobby-name">
+        {{key}}
+        </h2>
+        <div>
+        {% for img in user.hobbies.get(key)%}
+            <img class = "hobby-img" src="./static/img/{{ img }}" alt = "hobby image"></img>
+        {% endfor %}
+        </div>
+        <br></br>
+    {% endfor %}
+    
+
+{% endblock %}
+
