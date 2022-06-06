@@ -13,19 +13,16 @@ STAR_USER_INFO = {
         'hobby 4': ['smallcats.png']
      },
     'experiences':{
-        'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
-                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi' 
-                + ' ut aliquip ex ea commodo consequat.'],
-        'Job 2': ['did this', 'did that']
+        'Software Developer Intern @ RBC': ['Currently working on improving IAM processes with a security team of 10'],
+        'Meta x MLH Production Engineer Fellow': ['Creating a flask website using Jinja with a portfolio', 'Learning how to use Python and Flask to create a webpage!']
     },
     'education':{
-        'XX College': ['logo.jpg'],
-        'XX University': ['smallcats.png']
+        'University of Waterloo': ['waterloo.jpg'],
+        'Pierre Elliott Trudeau High School': ['peths.jpg']
     },
     'images':[
-        'logo.jpg',
-        'smallcats.png'
+        'waterloo.jpg',
+        'peths.jpg'
     ]
 }
 
@@ -69,4 +66,3 @@ def countries():
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', user = STAR_USER_INFO)
-
