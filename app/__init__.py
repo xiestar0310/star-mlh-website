@@ -34,9 +34,9 @@ ELAINE_USER_INFO = {
         'hobby 4': ['smallcats.png']
      },
     'experiences':{
-        'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
-                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi' 
+        'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
                 + ' ut aliquip ex ea commodo consequat.'],
         'Job 2': ['did this', 'did that']
     },
