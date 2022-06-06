@@ -2,9 +2,18 @@
 
 {% block pagetitle %} Education {% endblock %}
 {% block name %}
-<p>
+
+<h2>
     {% for key in user.education %}
-     <li>{{key}}</li>
+        {{key}}
+        <div>
+        {% for img in user.education.get(key)%}
+            <img class = "education-img" src="./static/img/{{ img }}" alt = "education image"></img>
+        {% endfor %}
+        </div>
     {% endfor %}
-</p>
+
+</h2>
+
 {% endblock %}
+
