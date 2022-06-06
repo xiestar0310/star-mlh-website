@@ -27,8 +27,19 @@ STAR_USER_INFO = {
 }
 
 ELAINE_USER_INFO = {
-    'hobbies':['Blogging','Reading Books','Playing chess'],
-    'experiences': ['lorem ipsum', 'xxx', 'more description about work experiences'],
+        'hobbies':{
+        'hobby 1': ['logo.jpg'],
+        'hobby 2': ['smallcats.png'],
+        'hobby 3': ['logo.jpg'],
+        'hobby 4': ['smallcats.png']
+     },
+    'experiences':{
+        'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi' 
+                + ' ut aliquip ex ea commodo consequat.'],
+        'Job 2': ['did this', 'did that']
+    },
     'education':{
         'XX College': ['logo.jpg'],
         'XX University': ['smallcats.png']
@@ -43,9 +54,9 @@ ELAINE_USER_INFO = {
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
-@app.route('/about')
+@app.route('/elaine_about')
 def about():
-    return render_template('about.html')
+    return render_template('elaine_about.html', user = ELAINE_USER_INFO)
 
 @app.route('/home')
 def home():
@@ -53,7 +64,7 @@ def home():
 
 @app.route('/education')
 def education():
-    return render_template('education.html', user = USER_INFO)
+    return render_template('education.html', user = STAR_USER_INFO)
 
 @app.route('/star_about')
 def star_about():
