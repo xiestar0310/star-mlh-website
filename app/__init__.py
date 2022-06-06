@@ -34,18 +34,13 @@ ELAINE_USER_INFO = {
         'hobby 4': ['smallcats.png']
      },
     'experiences':{
-        'Job 1': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
-                + ' ut aliquip ex ea commodo consequat.'],
-        'Job 2': ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-                + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 
-                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi' 
-                + ' ut aliquip ex ea commodo consequat.']
+        'Teaching Assistant': ['Graded exams and homework for the classes Geometry, Algebra 2, Precalculus, and SAT preparatory',
+                'Documented and tracked students’ assignments and scores using spreadsheets',
+                'Communicated with students regularly about student progress through weekly emails']
     },
     'education':{
-        'XX College': ['logo.jpg'],
-        'XX University': ['smallcats.png']
+        'Boston University': ['bu.jpg'],
+        'Mission San Jose High School': ['msj.jpg']
     },
     'images':[
         'logo.jpg',
