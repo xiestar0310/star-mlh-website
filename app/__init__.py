@@ -50,3 +50,7 @@ def education():
 @app.route('/star_about')
 def star_about():
     return render_template('star_about.html', user = STAR_USER_INFO)
+
+@app.route('/countries')
+def countries():
+    return render_template('countries.html')
