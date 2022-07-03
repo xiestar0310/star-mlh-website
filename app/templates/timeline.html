@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        {% include 'navbar.html' %}
+    </header>
+    <!-- HTML form data -->
+    <form id="form">
+      <label for="get-name"> Name: </label>
+      <input name = "name" type = "name">
+
+      <label for="get-email"> Email: </label>
+      <input name = "email" type = "email">
+
+      <label for="get-content"> Content: </label>
+      <input name = "content" type = "content">
+
+      <button type ="submit"> Submit </button>
+    </form>
+
+    <div>
+      {% for x in data.timeline_posts %}
+      <div class="card border-none text-center shadow-lg mb-5" id="mytimeline">
+        <p class="card-text m-2"><span class="text-danger">Name:</span> {{x['name']}}</p>
+        <p class="card-text m-2"><span class="text-danger">Email:</span> {{x['email']}}</p>
+        <p class="card-text m-2"><span class="text-danger">Content:</span> {{x['content']}}</p>
+        <p class="card-text m-2"><span class="text-danger">Created At:</span> {{x['created_at']}}</p>
+        <p class="card-text m-2"><span class="text-danger">Id:</span> {{x['id']}}</p>
+      </div>
+      {% endfor %}
+
+      <script>
+      const form = document.getElementById('form');
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const prePayload = new FormData(form);
+        const payload = new URLSearchParams(prePayload);
+
+        fetch('/api/timeline_post', {
+          method: "POST",
+          body: payload,
+        })
+          .then(() => {
+            window.location.reload();
+          })
+      })
+      </script>
+</body>
+</html>
